@@ -1,34 +1,10 @@
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native"
 
-export default function Inserir() {
+export default function Excluir() {
     return (
         <View style={styles.container}>
-
-            <Text style={[styles.title]}>
-                Inserir Instrumento
-            </Text>
-
-            <Text style={[styles.text]}>
-                Id:
-            </Text>
-            <TextInput style={[styles.textInput]} />
-
-            <Text style={[styles.text]}>
-                Nome:
-            </Text>
-            <TextInput style={[styles.textInput]} />
-
-            <Text style={[styles.text]}>
-                Valor (R$):
-            </Text>
-            <TextInput style={[styles.textInput]} />
-
-            <Text style={[styles.text]}>
-                Tipo:
-            </Text>
-            <TextInput style={[styles.textInput]} />
             <TouchableOpacity style={[styles.buttonInserir]}>
-                <Text style={[styles.textButton]}>Inserir</Text>
+                <Text style={[styles.textButton]}>Excluir</Text>
             </TouchableOpacity>
         </View>
     );
@@ -38,7 +14,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#ffffff',
-        alignItems: 'flex-start',
+        alignItems: 'center',
         justifyContent: 'center',
         marginLeft: 30
     },

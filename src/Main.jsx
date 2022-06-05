@@ -50,12 +50,14 @@ export default function App() {
   );
 }
 
+
+/*=//=// style =//=// */
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
   },
   
   title: {

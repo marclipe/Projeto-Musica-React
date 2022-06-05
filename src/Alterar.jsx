@@ -1,11 +1,11 @@
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native"
 
-export default function Inserir() {
+export default function Alterar() {
     return (
         <View style={styles.container}>
 
             <Text style={[styles.title]}>
-                Inserir Instrumento
+                Alterar Instrumento
             </Text>
 
             <Text style={[styles.text]}>
@@ -28,7 +28,7 @@ export default function Inserir() {
             </Text>
             <TextInput style={[styles.textInput]} />
             <TouchableOpacity style={[styles.buttonInserir]}>
-                <Text style={[styles.textButton]}>Inserir</Text>
+                <Text style={[styles.textButton]}>Alterar</Text>
             </TouchableOpacity>
         </View>
     );
