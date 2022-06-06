@@ -3,33 +3,33 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-nativ
 export default function Inserir() {
     return (
         <View style={styles.container}>
-
+            <View style={styles.content}>
             <Text style={[styles.title]}>
                 Inserir Instrumento
             </Text>
-
             <Text style={[styles.text]}>
                 Id:
             </Text>
-            <TextInput style={[styles.textInput]} />
+            <TextInput style={[styles.textInput]} placeholder="Id" autoFocus/>
 
             <Text style={[styles.text]}>
                 Nome:
             </Text>
-            <TextInput style={[styles.textInput]} />
+            <TextInput style={[styles.textInput]} placeholder="Nome"/>
 
             <Text style={[styles.text]}>
                 Valor (R$):
             </Text>
-            <TextInput style={[styles.textInput]} />
+            <TextInput style={[styles.textInput]} placeholder="Valor" />
 
             <Text style={[styles.text]}>
                 Tipo:
             </Text>
-            <TextInput style={[styles.textInput]} />
+            <TextInput style={[styles.textInput]} placeholder="Tipo"/>
             <TouchableOpacity style={[styles.buttonInserir]}>
                 <Text style={[styles.textButton]}>Inserir</Text>
             </TouchableOpacity>
+            </View>
         </View>
     );
 }
@@ -40,6 +40,9 @@ const styles = StyleSheet.create({
         backgroundColor: '#ffffff',
         alignItems: 'flex-start',
         justifyContent: 'center',
+    },
+
+    content: {
         marginLeft: 30
     },
 

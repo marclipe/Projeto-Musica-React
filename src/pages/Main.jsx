@@ -1,47 +1,47 @@
+import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native';
 import Inserir from './Inserir';
 
-const imagemFundo = '../assets/imagens/guitar.webp';
+//import imagemFundo from '../assets/imagens/guitar.webp';
 
 export default function App() {
+  const navigation = useNavigation()
+  function handleNavigate(route) {
+    navigation.navigate(route)
+  }
+
   return (
     <View style={styles.container}>
-      <Image
-        source={require(imagemFundo)}
-        style={{ width: 300, height: 150, marginBottom: 15, borderRadius: 20}}
-      />
+      
 
       <Text style={[styles.title]}>Projeto Música</Text>
 
-      <TouchableOpacity style={[styles.button, {
-        backgroundColor: '#F27F1B'
-      }]} onClick={() => { }}>
+      <TouchableOpacity 
+        style={[styles.button, {
+          backgroundColor: '#F27F1B'
+        }]}
+       onPress={() => handleNavigate("Inserir")}
+      >
         <Text style={styles.textButton}>Inserir Instrumento</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.button, {
         backgroundColor: '#F27F1B'
-      }]} onClick={() => { }}>
+      }]} onPress={() => handleNavigate("Alterar")}>
         <Text style={styles.textButton}>Alterar Instrumento</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.button, {
         backgroundColor: '#F27F1B'
-      }]} onClick={() => { }}>
-        <Text style={styles.textButton}>Excluir Instrumento</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity style={[styles.button, {
-        backgroundColor: '#F27F1B'
-      }]} onClick={() => { }}>
+      }]} onPress={() => handleNavigate("Listar")}>
         <Text style={styles.textButton}>Listar Instrumento</Text>
       </TouchableOpacity>
 
       <TouchableOpacity style={[styles.button, {
         backgroundColor: '#F27F1B'
-      }]} onClick={() => { }}>
+      }]} onPress={() => handleNavigate("Buscar")}>
         <Text style={styles.textButton}>Buscar Instrumento</Text>
       </TouchableOpacity>
 

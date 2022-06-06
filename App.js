@@ -1,15 +1,11 @@
 import React from 'react'
-import Main from "./src/Main"
 
-import Inserir from "./src/Inserir"
-import Alterar from "./src/Alterar"
-import Excluir from "./src/Excluir"
-import Listar from './src/Listar'
+import Routes from './src/app.routes'
 
 export default function App() {
 
   return (
-    /*<Main />*/
-    <Alterar />
+    <Routes />
+   // <Alterar />
   );
 }
