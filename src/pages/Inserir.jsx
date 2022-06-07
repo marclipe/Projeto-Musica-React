@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         shadowColor: "#000",
         elevation: 2, 
-        
     },
 
     textButton: {

@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
         height: 50,
         borderRadius: 10,
         shadowColor: "#000",
-        elevation: 2,
+        elevation: 2
     },
 
     textButton: {
