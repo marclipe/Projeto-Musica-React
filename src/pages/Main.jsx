@@ -2,9 +2,6 @@ import { useNavigation } from '@react-navigation/native';
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native';
-import Inserir from './Inserir';
-
-//import imagemFundo from '../assets/imagens/guitar.webp';
 
 export default function App() {
   const navigation = useNavigation()
@@ -14,15 +11,19 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      
+      {/* Imagem violão*/}
+      <Image
+        source={require('../imagens/guitar.png')}
+        style={{ width: 300, height: 175, borderRadius: 20 }}
+      />
 
       <Text style={[styles.title]}>Projeto Música</Text>
 
-      <TouchableOpacity 
+      <TouchableOpacity
         style={[styles.button, {
           backgroundColor: '#F27F1B'
         }]}
-       onPress={() => handleNavigate("Inserir")}
+        onPress={() => handleNavigate("Inserir")}
       >
         <Text style={styles.textButton}>Inserir Instrumento</Text>
       </TouchableOpacity>
@@ -59,10 +60,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center'
   },
-  
+
   title: {
+    paddingTop: 20, 
     color: '#402107',
-    fontSize: 25, 
+    fontSize: 25,
     marginBottom: 10
   },
 
@@ -79,6 +81,8 @@ const styles = StyleSheet.create({
   },
 
   textButton: {
-    color: '#ffffff'
+    color: '#ffffff', 
+    fontSize: 20,
+    textAlign: 'center'
   }
 });

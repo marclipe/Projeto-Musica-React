@@ -3,7 +3,7 @@ import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-nativ
 export default function Buscar() {
     return (
         <View style={styles.container}>
-             <Text style={[styles.title]}>
+            <Text style={[styles.title]}>
                 Buscar Instrumento
             </Text>
             <TextInput style={[styles.textInput]} placeholder="Buscar por nome"></TextInput>
@@ -19,8 +19,7 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#ffffff',
         alignItems: 'center',
-        justifyContent: 'center',
-        marginLeft: 30
+        justifyContent: 'center'
     },
 
     title: {
@@ -33,30 +32,34 @@ const styles = StyleSheet.create({
     text: {
         color: '#F27F1B',
         fontSize: 20,
-        fontSize: 30,
         fontStyle: 'bold',
         marginBottom: 10
     },
 
     textInput: {
-        width: 200,
+        width: 270,
         height: 40,
         borderWidth: 1,
         borderColor: '#402107',
-        marginBottom: 10
+        marginBottom: 10,
+        borderRadius: 10
     },
 
     buttonBuscar: {
         backgroundColor: '#F27F1B',
         padding: 6,
         marginTop: 10,
-        width: 90,
+        width: 100,
         height: 50,
-        borderRadius: 10
+        borderRadius: 10,
+        shadowColor: "#000",
+        elevation: 2,
+        marginVertical: 12,
     },
 
     textButton: {
         fontSize: 25,
         color: '#fff',
+        textAlign: 'center'
     }
 });

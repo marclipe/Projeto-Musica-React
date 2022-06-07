@@ -23,8 +23,12 @@ export default function Routes() {
         <App.Screen name='Alterar' component={Alterar} options={{
           headerShown: false
         }}/>
-        <App.Screen name='Listar' component={Listar} />
-        <App.Screen name='Buscar' component={Buscar} />
+        <App.Screen name='Listar' component={Listar}  options={{
+          headerShown: false
+        }}/>
+        <App.Screen name='Buscar' component={Buscar} options={{
+          headerShown: false
+        }} />
       </App.Navigator>
     </NavigationContainer>
   );
