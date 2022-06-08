@@ -3,11 +3,19 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { Image } from 'react-native';
 
+
 export default function App() {
   const navigation = useNavigation()
   function handleNavigate(route) {
     navigation.navigate(route)
   }
+
+  /* ======= Passo 3 - create Table ======*/  
+  useEffect(() => {
+    createTable(); 
+  }, []); 
+
+ 
 
   return (
     <View style={styles.container}>
@@ -62,7 +70,7 @@ const styles = StyleSheet.create({
   },
 
   title: {
-    paddingTop: 20, 
+    paddingTop: 20,
     color: '#402107',
     fontSize: 25,
     marginBottom: 10
@@ -81,7 +89,7 @@ const styles = StyleSheet.create({
   },
 
   textButton: {
-    color: '#ffffff', 
+    color: '#ffffff',
     fontSize: 20,
     textAlign: 'center'
   }
