@@ -9,12 +9,6 @@ export default function App() {
   function handleNavigate(route) {
     navigation.navigate(route)
   }
-
-  /* ======= Passo 3 - create Table ======*/  
-  useEffect(() => {
-    createTable(); 
-  }, []); 
-
  
 
   return (

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useEffect, useState } from 'react/cjs/react.production.min';
-import SQLite from 'react-native-sqlite-storage'
+import * as SQLite from 'react-native-sqlite-storage'
 /* ======= Passo 1 BD ======*/
 const db = SQLite.openDatabase(
     {
@@ -15,69 +15,7 @@ const db = SQLite.openDatabase(
 
 
 export default function App({ navigation }) {
-    const [nome, setNome] = useState('');
-    const [valor, setValor] = useState('');
-    const [tipo, setTipo] = useState('');
-
-    useEffect(() => {
-        createTable(); 
-        getData();
-    }, []);
-
-    /* ======= Passo 2 TABLE ======*/
-    const createTable = () => {
-        db.transaction((tx) => {
-            tx.executeSql(
-                "CREATE TABLE IF NOT EXISTS "
-                + "Users"
-                + "(ID INTEGER PRIMARY KEY AUTOINCREMENT, Nome TEXT, Valor INTEGER, Tipo TEXT);"
-            )
-        })
-    }
-
-    const getData = () => {
-        try {
-            AsyncStorage.getItem('UserData');
-            then(value => {
-                if (value != null) {
-                    navigation.navigate('Main');
-                }
-            })
-        } catch (error) {
-            console.log(error);
-        }
-    }
-
-    const setData = async () => {
-        if (nome.length == 0 || valor.length == 0 || tipo.length == 0) {
-            Alert.alert('ERRO!! Por favor insira os dados')
-        } else {
-            try {
-                /*user = {
-                    Name: name,
-                    Valor: valor,
-                    Tipo: tipo
-                }
-                await AsyncStorage.setItem('UserData'.JSON.stringify(user))*/
-                db.transaction((tx) => {
-                    /*await tx.executeSql(
-                        "INSERT INTO Users (Name, Valor, Tipo) VALUES ('" + name + "', " + valor + ", " + tipo + ")" 
-                    );*/
-                    await tx.executeSql(
-                        "INSERT INTO Users (Name, Valor, Tipo) VALUES (?,?,?)", [nome, valor, tipo]
-                    );
-                })
-                navigation.navigate('App')
-            } catch (error) {
-                console.log(error);
-            }
-        }
-
-        return (
-            <View style={styles.container}>
-            </View>
-        );
-    }
+   
 
     /*
         /*=//=// style =//=// */
@@ -115,3 +53,4 @@ export default function App({ navigation }) {
         }
     });
 }
+
