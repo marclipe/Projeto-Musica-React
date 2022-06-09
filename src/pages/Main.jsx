@@ -9,7 +9,7 @@ export default function App() {
   function handleNavigate(route) {
     navigation.navigate(route)
   }
- 
+
 
   return (
     <View style={styles.container}>

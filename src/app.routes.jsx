@@ -18,7 +18,7 @@ export default function Routes() {
           headerShown: false
         }} />
         <App.Screen name='Inserir' component={Inserir} options={{
-          headerShown: false
+          headerShown: false 
         }}/>
         <App.Screen name='Alterar' component={Alterar} options={{
           headerShown: false

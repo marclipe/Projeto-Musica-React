@@ -4,14 +4,7 @@ export default function Inserir() {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
-                <Text style={[styles.title]}>
-                    Inserir Instrumento
-                </Text>
-                <Text style={[styles.text]}>
-                    Id:
-                </Text>
-                <TextInput style={[styles.textInput]} placeholder="Id" autoFocus />
-
+               
                 <Text style={[styles.text]}>
                     Nome:
                 </Text>

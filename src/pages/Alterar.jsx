@@ -20,7 +20,7 @@ export default function Alterar() {
                     Tipo:
                 </Text>
                 <TextInput style={[styles.textInput]} />
-                <TouchableOpacity style={[styles.buttonInserir]}>
+                <TouchableOpacity style={[styles.buttonInserir]} onPress={() => handleNavigate("Inserir")}>
                     <Text style={[styles.textButton]}>Alterar</Text>
                 </TouchableOpacity>
 

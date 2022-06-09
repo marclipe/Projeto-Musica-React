@@ -12,17 +12,7 @@ export default function Listar(/*props*/) {
             <Text style={styles.value}>R$ 150,00</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.card}>
-            <Text style={styles.instrument}>Violão</Text>
-            <Text style={styles.type}>Cordas</Text>
-            <Text style={styles.value}>R$ 150,00</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.card}>
-            <Text style={styles.instrument}>Violão</Text>
-            <Text style={styles.type}>Cordas</Text>
-            <Text style={styles.value}>R$ 150,00</Text>
-        </TouchableOpacity>
+        
         </View>
     );
 }

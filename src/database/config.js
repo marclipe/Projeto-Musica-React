@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useEffect, useState } from 'react/cjs/react.production.min';
 import * as SQLite from 'react-native-sqlite-storage'
+import App from '../../App';
 /* ======= Passo 1 BD ======*/
 const db = SQLite.openDatabase(
     {
@@ -12,11 +11,7 @@ const db = SQLite.openDatabase(
     error => { console.log(error) }
 );
 
-
-
-export default function App({ navigation }) {
-   
-
+export default function App({}) {
     /*
         /*=//=// style =//=// */
     const styles = StyleSheet.create({
