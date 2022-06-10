@@ -29,7 +29,7 @@ export default function Alterar() {
 
   return (
     <View style={styles.container}>
-      <View style={[styles.content]}>
+      <View style={styles.content}>
         <Text style={styles.text}>ID:</Text>
         <TextInput style={styles.textInput} onChangeText={(value) => setId(value)} />
         <Text style={[styles.text]}>

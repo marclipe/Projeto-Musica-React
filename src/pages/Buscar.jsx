@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         shadowColor: "#000",
         elevation: 2,
-        marginVertical: 12,
+        marginVertical: 12
     },
 
     textButton: {

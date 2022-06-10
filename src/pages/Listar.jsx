@@ -86,7 +86,5 @@ const styles = StyleSheet.create({
   view: {
     width: 300,
     marginTop: 30,
-
-
   }
 });

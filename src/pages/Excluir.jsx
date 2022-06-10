@@ -24,16 +24,17 @@ export default function Excluir() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.texto}>ID</Text>
-      <TextInput 
-        style={styles.textInput} 
-        placeholder="Digite o ID"
-        onChangeText={(value) => setId(value)}
-      />
-
-      <TouchableOpacity style={[styles.buttonInserir]} onPress={excluirInstrumento}>
-        <Text style={[styles.textButton]} >Excluir</Text>
-      </TouchableOpacity>
+      <View style={[styles.content]}>
+          <Text style={styles.text}>ID</Text>
+          <TextInput
+            style={styles.textInput}
+            placeholder="Digite o ID"
+            onChangeText={(value) => setId(value)}
+          />
+          <TouchableOpacity style={[styles.buttonInserir]} onPress={excluirInstrumento}>
+            <Text style={[styles.textButton]} >Excluir</Text>
+          </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -43,7 +44,10 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#ffffff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'center'
+  },
+
+  content: {
     marginLeft: 30
   },
 
@@ -56,10 +60,10 @@ const styles = StyleSheet.create({
 
   text: {
     color: '#F27F1B',
-    fontSize: 20,
-    fontSize: 30,
+    fontSize: 25,
     fontStyle: 'bold',
-    marginBottom: 10
+    marginBottom: 10,
+    textAlign: 'center'
   },
 
   textInput: {
@@ -67,20 +71,23 @@ const styles = StyleSheet.create({
     height: 40,
     borderWidth: 1,
     borderColor: '#402107',
-    marginBottom: 10
+    marginBottom: 10,
+    borderRadius: 10
   },
 
   buttonInserir: {
     backgroundColor: '#F27F1B',
     padding: 6,
     marginTop: 10,
-    width: 90,
+    width: 200,
     height: 50,
     borderRadius: 10
+
   },
 
   textButton: {
     fontSize: 25,
     color: '#fff',
+    textAlign: 'center'
   }
 });
