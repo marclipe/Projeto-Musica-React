@@ -1,6 +1,30 @@
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native"
+import { useState } from "react";
+import { Alert } from "react-native";
+import * as SQLite from 'expo-sqlite'
+
+export const db = SQLite.openDatabase(
+    'projetoMusica'
+);
 
 export default function Inserir() {
+    const [nome, setNome] = useState(''); 
+    const [valor, setValor] = useState(); 
+    const [tipo, setTipo] = useState(''); 
+
+    function novoInstrumento() {
+
+            db.transaction(tx => {
+              tx.executeSql('INSERT INTO Instrumentos (Nome, Valor, Tipo) values (?, ?, ?)', [ nome, 120, tipo],
+                (txObj, resultSet) => {
+                    Alert.alert('Instrumento Cadastrado!!')
+                },
+                (txObj, error) => console.log('Error', error))
+            })
+           
+            
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -8,18 +32,22 @@ export default function Inserir() {
                 <Text style={[styles.text]}>
                     Nome:
                 </Text>
-                <TextInput style={[styles.textInput]} placeholder="Nome" />
+                <TextInput 
+                    style={[styles.textInput]} 
+                    placeholder="Nome" 
+                    onChangeText={(value) => setNome(value)}/>
 
                 <Text style={[styles.text]}>
                     Valor (R$):
                 </Text>
-                <TextInput style={[styles.textInput]} placeholder="Valor" />
+
+                <TextInput style={[styles.textInput]} placeholder="Valor" onChangeText={(value) => setValor(value)} />
 
                 <Text style={[styles.text]}>
                     Tipo:
                 </Text>
-                <TextInput style={[styles.textInput]} placeholder="Tipo" />
-                <TouchableOpacity style={[styles.buttonInserir]}>
+                <TextInput style={[styles.textInput]} placeholder="Tipo" onChangeText={(value) => setTipo(value)}/>
+                <TouchableOpacity style={[styles.buttonInserir]} onPress={novoInstrumento}>
                     <Text style={[styles.textButton]}>Inserir</Text>
                 </TouchableOpacity>
             </View>
